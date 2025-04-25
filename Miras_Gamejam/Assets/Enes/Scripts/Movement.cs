@@ -3,8 +3,8 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    public float speed = 5f;
-    private Rigidbody2D rb;
+    [SerializeField] float speed = 5f;
+    Rigidbody2D rb;
 
     void Start()
     {

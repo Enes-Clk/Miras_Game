@@ -1,4 +1,4 @@
-// Oyunu başlatmak, yeniden başlatmak veya çıkmak için sahne kontrolleri
+
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -6,7 +6,7 @@ public class SceneController : MonoBehaviour
 {
     public void StartGame()
     {
-        SceneManager.LoadScene("GameScene"); // Sahne ismini yaz
+        SceneManager.LoadScene("GameScene"); 
     }
 
     public void RestartGame()
