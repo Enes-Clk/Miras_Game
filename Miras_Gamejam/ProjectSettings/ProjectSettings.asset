@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 28
-  productGUID: 529a31e0d72ff774f95115aaa4e769db
+  productGUID: 103557062628a6649ab0feae410927a8
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -930,7 +930,7 @@ PlayerSettings:
   cloudProjectId: 82e31072-c31a-4756-9947-84880e9408b4
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
+  projectName: Miras_Gamejam 2025-04-25_18-19-09
   organizationId: nerveless
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
