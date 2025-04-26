@@ -264,6 +264,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 4146185255948866372}
+    - targetCorrespondingSourceObject: {fileID: 3624601830217637460, guid: 598aa4cb4d4c99e4c8ebf8cf36fa9036,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3700531690105691550}
   m_SourcePrefab: {fileID: 100100000, guid: 598aa4cb4d4c99e4c8ebf8cf36fa9036, type: 3}
 --- !u!1 &2586122311739831330 stripped
 GameObject:
@@ -359,6 +363,33 @@ MonoBehaviour:
   - {fileID: -644364327260829848, guid: 515479a3ddd36ee4c8200db264eea736, type: 3}
   - {fileID: 6158451666463912383, guid: 515479a3ddd36ee4c8200db264eea736, type: 3}
   frameRate: 0.3
+--- !u!50 &3700531690105691550
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2586122311739831330}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!212 &4373216272626146523 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 3251077371095840429, guid: 598aa4cb4d4c99e4c8ebf8cf36fa9036,
