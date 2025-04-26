@@ -15,6 +15,6 @@ public class Movement : MonoBehaviour
     {
         float moveX = Input.GetAxisRaw("Horizontal");
         float moveY = Input.GetAxisRaw("Vertical");
-        rb.linearVelocity = new Vector2(moveX, moveY) * speed;
+        rb.linearVelocity = new Vector2(moveX, moveY) * speed * Time.deltaTime;
     }
 }
