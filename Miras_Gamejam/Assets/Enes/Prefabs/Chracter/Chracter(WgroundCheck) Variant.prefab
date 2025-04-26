@@ -92,12 +92,12 @@ PrefabInstance:
     - target: {fileID: 8493870078549678402, guid: c99cabcb99aa40f44bd14ad41aa05e02,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -7.5345
+      value: -11.61
       objectReference: {fileID: 0}
     - target: {fileID: 8493870078549678402, guid: c99cabcb99aa40f44bd14ad41aa05e02,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.0367
+      value: -0.98556614
       objectReference: {fileID: 0}
     - target: {fileID: 8493870078549678402, guid: c99cabcb99aa40f44bd14ad41aa05e02,
         type: 3}
@@ -177,6 +177,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8631635871310429243}
   m_PrefabAsset: {fileID: 0}
+--- !u!212 &5438503438678548704 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 4373216272626146523, guid: c99cabcb99aa40f44bd14ad41aa05e02,
+    type: 3}
+  m_PrefabInstance: {fileID: 8631635871310429243}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6064795766122924057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2586122311739831330, guid: c99cabcb99aa40f44bd14ad41aa05e02,
@@ -196,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  jumpForce: 10
+  jumpForce: 7
   groundCheck: {fileID: 8371881918303396865}
   groundCheckRadius: 0.2
   groundLayer:
@@ -214,12 +220,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 499986f44ef4f0c43b893b2a88fd1c70, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  spriteRenderer: {fileID: 0}
-  jumpSprites: []
+  spriteRenderer: {fileID: 5438503438678548704}
+  jumpSprites:
+  - {fileID: -9171765164682421662, guid: dec0a33e531714041afede529e2a0b88, type: 3}
+  - {fileID: 4708063549654775903, guid: 6f1b23096e2bf764fab9ca2313563e66, type: 3}
+  - {fileID: 8464212637782921943, guid: 6f1b23096e2bf764fab9ca2313563e66, type: 3}
   frameRate: 0.1
   jumpHeight: 2
   jumpDuration: 0.5
-  groundCheck: {fileID: 0}
+  groundCheck: {fileID: 8371881918303396865}
   groundCheckRadius: 0.2
   whatIsGround:
     serializedVersion: 2
