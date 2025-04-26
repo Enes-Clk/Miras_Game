@@ -98,20 +98,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 1210684161165833274}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3a56a6fb0f5bcd040860beb4c9885fca, type: 3}
+  m_Script: {fileID: 11500000, guid: 1811dbe6031af4d45b7aaf00119417b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   spriteRenderer: {fileID: 451536321509725170}
   walkSprites:
-  - {fileID: 5309138808169907986, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
   - {fileID: 50035661319081574, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
   - {fileID: -2074787619541806325, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
   - {fileID: 9102475100256893694, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
   - {fileID: 5992016377341719694, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
   - {fileID: 4571792938597723682, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
-  - {fileID: 5992016377341719694, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
-  - {fileID: 9102475100256893694, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
-  - {fileID: -2074787619541806325, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
-  - {fileID: 50035661319081574, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
-  - {fileID: 5309138808169907986, guid: 2b56bf96c6fbe61459ba6348b348d3cd, type: 3}
+  - {fileID: 0}
+  idleSprites: []
+  jumpSprites: []
   frameRate: 0.1
+  moveSpeed: 5
+  jumpForce: 5
