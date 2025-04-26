@@ -5,42 +5,73 @@ public class PlayerAttack : MonoBehaviour
 {
     public Transform characterTransform;
     public SpriteRenderer swordRenderer;
-    public Sprite[] attackSprites; // 0: normal, 1: vurma frame1, 2: vurma frame2, vs...
+    public Sprite[] normalAttackSprites; // Normal vuruş animasyonu kareleri
+    public Sprite[] reverseAttackSprites; // Ters vuruş animasyonu kareleri
 
     private bool canAttack = true;
-    public float attackCooldown = 0.5f; // Saldırı sonrası bekleme süresi
+    private bool isNextAttackReversed = false; // Sıradaki vuruş ters mi?
+
+    public float attackCooldown = 0.5f; // Her saldırı sonrası bekleme süresi
+    private bool isHoldingMouse = false; // Farenin basılı tutulduğunu algılamak için
 
     void Update()
     {
         if (Input.GetMouseButtonDown(0) && canAttack)
         {
-            Attack();
+            isHoldingMouse = true;
+            SingleAttack(); // İlk tıklamada normal bir vuruş
+        }
+
+        if (Input.GetMouseButton(0) && canAttack && isHoldingMouse)
+        {
+            HoldAttack(); // Basılı tutuluyorsa düz-ters saldırıları başlat
+        }
+
+        if (Input.GetMouseButtonUp(0))
+        {
+            isHoldingMouse = false; // Mouse bırakılınca durdur
         }
     }
 
-    void Attack()
+    void SingleAttack()
     {
-        canAttack = false; // Saldırı yapınca yeni saldırıyı hemen engelle
+        canAttack = false;
 
-        // Kılıç savurma animasyonu (sprite değişimi)
         Sequence attackSequence = DOTween.Sequence();
 
-        attackSequence.AppendCallback(() => swordRenderer.sprite = attackSprites[0]);
-        attackSequence.AppendInterval(0.1f);
-        attackSequence.AppendCallback(() => swordRenderer.sprite = attackSprites[1]);
-        attackSequence.AppendInterval(0.1f);
-        attackSequence.AppendCallback(() => swordRenderer.sprite = attackSprites[2]);
-        attackSequence.AppendCallback(() => swordRenderer.sprite = attackSprites[3]);
-        attackSequence.AppendInterval(0.1f);
-        attackSequence.AppendCallback(() => swordRenderer.sprite = attackSprites[4]);
-        attackSequence.AppendInterval(0.1f);
-        attackSequence.AppendCallback(() => swordRenderer.sprite = attackSprites[5]);
-        attackSequence.AppendCallback(() => swordRenderer.sprite = attackSprites[6]);
-        attackSequence.AppendInterval(0.1f);
+        float frameInterval = 0.1f;
 
-        // Saldırı animasyonu bittikten sonra cooldownu başlat
+        for (int i = 0; i < normalAttackSprites.Length; i++)
+        {
+            attackSequence.AppendCallback(() => swordRenderer.sprite = normalAttackSprites[i]);
+            attackSequence.AppendInterval(frameInterval);
+        }
+
         attackSequence.OnComplete(() =>
         {
+            Invoke(nameof(ResetAttack), attackCooldown);
+        });
+    }
+
+    void HoldAttack()
+    {
+        canAttack = false;
+
+        Sprite[] currentAttackSprites = isNextAttackReversed ? reverseAttackSprites : normalAttackSprites;
+
+        Sequence attackSequence = DOTween.Sequence();
+
+        float frameInterval = 0.1f;
+
+        for (int i = 0; i < currentAttackSprites.Length; i++)
+        {
+            attackSequence.AppendCallback(() => swordRenderer.sprite = currentAttackSprites[i]);
+            attackSequence.AppendInterval(frameInterval);
+        }
+
+        attackSequence.OnComplete(() =>
+        {
+            isNextAttackReversed = !isNextAttackReversed; // Sonraki saldırıyı ters yap
             Invoke(nameof(ResetAttack), attackCooldown);
         });
     }
