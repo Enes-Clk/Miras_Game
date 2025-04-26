@@ -132,6 +132,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -434,7 +447,20 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Theron_0: -8962907034753194365
+      Theron_1: -4395201630830407272
+      Theron_10: -7864213306245374035
+      Theron_11: 639000408832843375
+      Theron_12: -325529368169332935
+      Theron_2: 1443423565693565024
+      Theron_3: 226777632141860836
+      Theron_4: 4900995294454952
+      Theron_5: -4353195076093028154
+      Theron_6: 5276710386859474043
+      Theron_7: 4565622481610305610
+      Theron_8: -9171765164682421662
+      Theron_9: 5669608403206534472
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
