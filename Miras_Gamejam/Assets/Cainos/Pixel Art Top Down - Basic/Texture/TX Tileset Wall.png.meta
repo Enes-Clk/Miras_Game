@@ -1796,6 +1796,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TX Tileset Wall_61
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 176
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa544d57c3a978498060776955f885b
+      internalID: 2029583108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1868,6 +1890,7 @@ TextureImporter:
       TX Tileset Wall_59: 21300118
       TX Tileset Wall_6: 21300012
       TX Tileset Wall_60: 21300120
+      TX Tileset Wall_61: 2029583108
       TX Tileset Wall_7: 21300014
       TX Tileset Wall_8: 21300016
       TX Tileset Wall_9: 21300018
