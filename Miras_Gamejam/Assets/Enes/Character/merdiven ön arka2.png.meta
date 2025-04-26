@@ -272,7 +272,13 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      "merdiven \xF6n arka2_0": 7297695367959519572
+      "merdiven \xF6n arka2_1": 2541715330916259707
+      "merdiven \xF6n arka2_2": -6190565901072401531
+      "merdiven \xF6n arka2_3": 1358716168372765997
+      "merdiven \xF6n arka2_4": -3742939702033285184
+      "merdiven \xF6n arka2_5": 9205238965474293588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
