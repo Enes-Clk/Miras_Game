@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Sahneler/Start.unity
+    guid: d44c39ab2bbfbc24bbd61bbba06e840b
+  - enabled: 1
     path: Assets/Scenes/Sahneler/Map.unity
     guid: 5ec0e9fb0a676724fa8478612ff3c2fa
   - enabled: 1
