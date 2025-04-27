@@ -1,4 +1,5 @@
 
+using System.Collections;
 using UnityEngine;
 
 public class CharacterIdleAnimation : MonoBehaviour
@@ -68,7 +69,7 @@ public class CharacterIdleAnimation : MonoBehaviour
                     // Saldırı animasyonunu başlat ve hareket etmeyi durdur
                     if (canAttack && !isAttacking)
                     {
-                        StartCoroutine(AttackPlayer());
+                        // StartCoroutine(AttackPlayer());
                     }
                 }
                 else
@@ -102,40 +103,40 @@ public class CharacterIdleAnimation : MonoBehaviour
         }
     }
 
-    private IEnumerator AttackPlayer()
-    {
-        // Saldırı durumunu güncelle
-        isAttacking = true;
-        canAttack = false;
-        rb.velocity = Vector2.zero; // Hareketi durdur
+    // private IEnumerator AttackPlayer()
+    // {
+    //     // Saldırı durumunu güncelle
+    //     isAttacking = true;
+    //     canAttack = false;
+    //     rb.velocity = Vector2.zero; // Hareketi durdur
         
-        // Saldırı animasyonu
-        animator.SetTrigger("Attack");
+    //     // Saldırı animasyonu
+    //     animator.SetTrigger("Attack");
         
-        // Saldırı animasyonu süresince bekle (animasyona göre ayarlanmalı)
-        yield return new WaitForSeconds(0.5f); // Saldırı animasyonunun vuruş anı
+    //     // Saldırı animasyonu süresince bekle (animasyona göre ayarlanmalı)
+    //     yield return new WaitForSeconds(0.5f); // Saldırı animasyonunun vuruş anı
         
-        // Menzil kontrolü tekrar yap (oyuncu kaçmış olabilir)
-        if (Vector2.Distance(transform.position, player.position) <= attackRange)
-        {
-            // Oyuncuya hasar ver
-            PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(attackDamage);
-            }
-        }
+    //     // Menzil kontrolü tekrar yap (oyuncu kaçmış olabilir)
+    //     if (Vector2.Distance(transform.position, player.position) <= attackRange)
+    //     {
+    //         // Oyuncuya hasar ver
+    //         PlayerHealth playerHealth = player.GetComponent<PlayerHealth>();
+    //         if (playerHealth != null)
+    //         {
+    //             playerHealth.TakeDamage(attackDamage);
+    //         }
+    //     }
         
-        // Saldırı animasyonunun geri kalanını bekle
-        yield return new WaitForSeconds(0.5f);
+    //     // Saldırı animasyonunun geri kalanını bekle
+    //     yield return new WaitForSeconds(0.5f);
         
-        // Saldırı durumunu güncelle
-        isAttacking = false;
+    //     // Saldırı durumunu güncelle
+    //     isAttacking = false;
         
-        // Cooldown süresi
-        yield return new WaitForSeconds(attackCooldown);
-        canAttack = true;
-    }
+    //     // Cooldown süresi
+    //     yield return new WaitForSeconds(attackCooldown);
+    //     canAttack = true;
+    // }
 
     private void PlayIdleAnimation()
     {
