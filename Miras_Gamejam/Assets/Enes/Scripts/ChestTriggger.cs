@@ -18,7 +18,7 @@ public class ChestTriggger : MonoBehaviour
     }
     void OnTriggerEnter2D(Collider2D other)
     {
-        if (other is BoxCollider)
+        if (other.CompareTag("Player"))
         {
             animator.SetTrigger("Play");
 
