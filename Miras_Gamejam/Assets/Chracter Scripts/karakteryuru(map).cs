@@ -39,11 +39,11 @@ public class PlayerMovement : MonoBehaviour
         {
             if (direction.x < 0)  // Eğer sola hareket ediyorsa
             {
-                transform.localScale = new Vector3(-0.3f, 0.3f, 0.3f);  // Karakteri sola döndür
+                transform.localScale = new Vector3(-0.12f, 0.12f, 0.12f);  // Karakteri sola döndür
             }
             else if (direction.x > 0)  // Eğer sağa hareket ediyorsa
             {
-                transform.localScale = new Vector3(0.3f, 0.3f, 0.3f);  // Karakteri sağa döndür
+                transform.localScale = new Vector3(0.12f, 0.12f, 0.12f);  // Karakteri sağa döndür
             }
             
             PlaySideWalkAnimation();  // Sola ve sağa yürüyüş animasyonunu başlat
