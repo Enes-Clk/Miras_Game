@@ -96,7 +96,7 @@ public class CharacterIdleAnimation : MonoBehaviour
             Vector2 direction = (player.position - transform.position).normalized;
             
             // Hareket
-            rb.velocity = direction * moveSpeed;
+            rb.linearVelocity = direction * moveSpeed;
             
             // Yürüme animasyonu
             animator.SetBool("IsMoving", true);
