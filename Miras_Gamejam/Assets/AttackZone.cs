@@ -3,7 +3,7 @@ using UnityEngine;
 public class AttackZone : MonoBehaviour
 {
     public HealthComponent Target;
-    public int DamageAmount = 2;
+    public int DamageAmount = 5;
     void OnTriggerEnter2D(Collider2D other)
     {
         if(other.CompareTag("Enemy")){

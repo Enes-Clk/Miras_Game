@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HealthComponent : MonoBehaviour
 {
@@ -8,6 +9,8 @@ public class HealthComponent : MonoBehaviour
         Health -= amount;
 
         if(Health <= 0){
+
+            SceneManager.LoadScene("Heal");
             
         }
     }

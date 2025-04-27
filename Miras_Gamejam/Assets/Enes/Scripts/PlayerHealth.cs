@@ -27,6 +27,7 @@ public class HealthSystem : MonoBehaviour
     {
         Debug.Log("Player öldü!");
         SceneManager.LoadScene("Heal");
+        Destroy(gameObject);
         // Ölüm animasyonu veya oyun sonu buraya eklenebilir
     }
     }

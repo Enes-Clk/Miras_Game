@@ -4719,6 +4719,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: TriggerTemplate (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4703365710879307352, guid: f2f73a06faba71448a80117dcaae9514,
+        type: 3}
+      propertyPath: sceneName
+      value: Dunegon 3
+      objectReference: {fileID: 0}
     - target: {fileID: 6858955000132474906, guid: f2f73a06faba71448a80117dcaae9514,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -9673,6 +9678,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: TriggerTemplate (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4703365710879307352, guid: f2f73a06faba71448a80117dcaae9514,
+        type: 3}
+      propertyPath: sceneName
+      value: Dunegon 4
       objectReference: {fileID: 0}
     - target: {fileID: 6858955000132474906, guid: f2f73a06faba71448a80117dcaae9514,
         type: 3}
