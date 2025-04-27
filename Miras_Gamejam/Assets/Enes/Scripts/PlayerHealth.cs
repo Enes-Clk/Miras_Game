@@ -5,19 +5,19 @@ using UnityEngine.SceneManagement;
 public class HealthSystem : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    [SerializeField] int PlayerHealth;
 
     void Start()
     {
-        currentHealth = maxHealth;
+        PlayerHealth = maxHealth;
     }
 
     public void TakeDamage(int amount)
     {
-        currentHealth -= amount;
-        Debug.Log("Player Health: " + currentHealth);
+        PlayerHealth -= amount;
+        Debug.Log("Player Health: " + PlayerHealth);
 
-        if (currentHealth <= 0)
+        if (PlayerHealth <= 0)
         {
             Die();
         }
@@ -26,6 +26,7 @@ public class HealthSystem : MonoBehaviour
     void Die()
     {
         Debug.Log("Player öldü!");
+        SceneManager.LoadScene("Heal");
         // Ölüm animasyonu veya oyun sonu buraya eklenebilir
     }
     }

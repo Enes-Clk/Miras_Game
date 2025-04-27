@@ -10,18 +10,18 @@ public class BulletSystem : MonoBehaviour
         Destroy(gameObject, lifeTime); // 5 saniye sonra kendi kendine yok olsun
     }
 
-    void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            // Player'ın bir Health componenti varsa, hasar ver
-            playerHealth playerHealth = other.GetComponent<PlayerHealth>();
-            if (playerHealth != null)
-            {
-                playerHealth.TakeDamage(damage);
-            }
+    // void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     if (other.CompareTag("Player"))
+    //     {
+    //         // Player'ın bir Health componenti varsa, hasar ver
+    //         playerHealth playerHealth = other.GetComponent<PlayerHealth>();
+    //         if (playerHealth != null)
+    //         {
+    //             playerHealth.TakeDamage(damage);
+    //         }
 
-            Destroy(gameObject); // Çarptıktan sonra top yok olsun
-        }
-    }
+    //         Destroy(gameObject); // Çarptıktan sonra top yok olsun
+    //     }
+    // }
 }
